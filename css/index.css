@@ -38,24 +38,18 @@ h2 {
     border-bottom: 2px solid #7169a8;
 }
 
-.experience-header {
+.experience-item {
     display: flex;
-    justify-content: space-between;
-}
-#Experience li {
+    flex-direction: column;
     background-color: #e9e6f7;
-    padding: 12px;
+    padding: 10px;
     margin-bottom: 10px;
     border-radius: 10px;
     color: #3f3b5c;
 }
-#Experience ul {
-    list-style: none;
-    padding: 0;
-}
-#Experience li::before {
-    content: "✦ ";
-    color: #8b7bb8;
+.experience-header {
+    display: flex;
+    justify-content: space-between;
 }
 
 #Connect {
@@ -65,13 +59,8 @@ h2 {
     display: flex;
     justify-content: center;
     gap: 30px;
-}
-#Connect ul {
     list-style: none;
     padding: 0;
-}
-#Connect li {
-    margin: 8px;
 }
 #Connect a {
     color: #d8c5ff;
