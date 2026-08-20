@@ -1,5 +1,5 @@
 body {
-    background-color: #10152f;
+    background-color: #17162b;
     color:#eee9ff;
     font-family: 'Trebuchet MS', Arial, sans-serif;
     margin: 0px;
@@ -7,7 +7,7 @@ body {
 }
 
 section {
-    background-color: #3f477f;
+    background-color: #34365f;
     margin: 25px auto;
     padding: 20px;
     max-width: 1000px;
@@ -16,7 +16,7 @@ section {
 }
 
 h1 {
-    color: #e6d8ff;
+    color: #e8dcff;
     font-size: 3em;
     font-weight: bold;
     text-align: center;
@@ -32,7 +32,7 @@ h1::after {
 
 h2 {
     text-align: center;
-    color:#d8c5ff;
+    color:#d6c9f5;
     font-size: 2em;
     font-weight: bold;
     border-bottom: 2px solid #7169a8;
@@ -41,15 +41,33 @@ h2 {
 .experience-item {
     display: flex;
     flex-direction: column;
-    background-color: #e9e6f7;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
+    background-color: #e1def0;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
     color: #3f3b5c;
 }
 .experience-header {
     display: flex;
     justify-content: space-between;
+}
+
+#Skills ul {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 13px;
+    list-style: none;
+    padding:0;
+}
+#Skills li::before {
+    content: "✦ ";
+}
+#Skills li {
+    background-color: #e1def0;
+    color: #3f3b5c;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 #Connect {
