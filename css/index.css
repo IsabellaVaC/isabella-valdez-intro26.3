@@ -87,34 +87,52 @@ h2 {
 }
 
 #LeaveMessage {
-    form input, form textarea {
-        width: 20%;
+    text-align: left;
+}
+    #LeaveMessage form input{
+        width: 50%;
+        max-width: 50%;
+    } 
+    #LeaveMessage form textarea {
+        width: 90%;
+        max-width: 90%;
         box-sizing: border-box;
-        margin: 10px;
+        margin: 10px 0;
+        padding: 10px;
     }
-    form label {
+    #LeaveMessage form label {
         display: block;
         margin-top: 5px;
         margin-bottom: 5px;
         font-weight: bold;
         font-size: 17px;
     }
-    form textarea {
-        height: 50px;
+    #LeaveMessage form textarea {
+        height: 95px;
+        max-width: 90%;
+        resize: vertical;
+        box-sizing: border-box;
     }
-    form button {
+    #LeaveMessage form button {
         background-color: #dcd7f5;
         color:#17162b;
         border: 2px solid #dcd7f5;
         border-radius: 10px;
         padding: 5px 10px;
-        border-radius: 5px;
         cursor: pointer;
         font-size: 16px;
         font-weight: bold;
+        transition: transform 0.2s, box-shadow 0.2s;
     }
-    form button:hover {
-        transition: transform 0.2s, box-shadow 0.1s;
+    #LeaveMessage form button:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 10px #8e7dff;
     }
-    text-align: left;
+    @media (max-width: 600px) {
+        #LeaveMessage form input, #LeaveMessage form textarea {
+            width: 100%;
+            max-width: 100%;
+            font-size: 16px;
+            padding: 10px;
+        }
 }
