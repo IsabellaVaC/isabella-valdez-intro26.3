@@ -85,3 +85,36 @@ h2 {
     text-decoration: none;
     font-weight: bold;
 }
+
+#LeaveMessage {
+    form input, form textarea {
+        width: 20%;
+        box-sizing: border-box;
+        margin: 10px;
+    }
+    form label {
+        display: block;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 17px;
+    }
+    form textarea {
+        height: 50px;
+    }
+    form button {
+        background-color: #dcd7f5;
+        color:#17162b;
+        border: 2px solid #dcd7f5;
+        border-radius: 10px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    form button:hover {
+        transition: transform 0.2s, box-shadow 0.1s;
+    }
+    text-align: left;
+}

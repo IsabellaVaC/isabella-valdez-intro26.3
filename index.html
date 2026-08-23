@@ -17,6 +17,7 @@
             <a href="#Skills">Skills</a>
             <a href="#Projects">Projects</a>
             <a href="#Connect">Connect</a>
+            <a href="#LeaveMessage">Leave a Message</a>
         </nav>
     </header>
     <section id="About">
@@ -86,6 +87,31 @@
                 <li><a href="https://www.linkedin.com/in/isabella-valdez-curiel-a8b3953a9/" target="_blank">LinkedIn</a></li>
             </ul>
         </section>
+
+        <section id="LeaveMessage"> 
+            <h2>Leave a Message</h2>
+            <form name="leave_message">
+                <label> Name: 
+                 <input type="text" name="usersName" required></label>
+        
+                <label>Email:
+                    <input type="email" name="usersEmail" required>
+                </label>
+                <br>
+
+                <label>Message: 
+                    <textarea name="usersMessage" required></textarea>
+                </label>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="messages">
+            <h2>Messages</h2>
+            <ul></ul>
+        </section>
+
         <script src="js/index.js"></script>
     </body>
 </html>
