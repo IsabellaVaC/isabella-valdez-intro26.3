@@ -18,18 +18,13 @@ fetch(`https://api.rawg.io/api/games?key=${apiKey}`)
             `;
 
             gameContainer.appendChild(gameElement);
-        });
-        const detailsButtons = document.querySelectorAll('button[data-game-id]');
-        detailsButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const gameId = button.getAttribute('data-game-id');
-                console.log('View details for game ID:', gameId);
+    
+            gameElement.querySelector('button').addEventListener('click', () => {
+                const gameId = gameElement.querySelector('button').dataset.gameId;
 
                 fetch(`https://api.rawg.io/api/games/${gameId}?key=${apiKey}`)
                     .then(response => response.json())
                     .then(data => {
-                        console.log('Game details:', data);
-
                         const gameDetailsContainer = document.getElementById('game-details');
                         gameDetailsContainer.innerHTML = `
                         <button id="back-button">Back to Games</button>
@@ -43,18 +38,18 @@ fetch(`https://api.rawg.io/api/games?key=${apiKey}`)
                             <p>Rating: ${data.rating}</p>
                             <p>Genres: ${data.genres.map(genre => genre.name).join(', ')}</p>
                             <p>${data.description_raw}</p>
-                    
                         `;
+
+                        const backButton = document.getElementById('back-button');
+                        backButton.addEventListener('click', () => {
+                            gameDetailsContainer.innerHTML = '';
+                            gameContainer.scrollIntoView();
+                        });
+                        gameDetailsContainer.scrollIntoView();
                     })
                     .catch(error => console.error('Error fetching game details:', error));
-                document.getElementById('game-details').scrollIntoView();
             });
-
-            const backButton = document.getElementById('back-button');
-
-                backButton.addEventListener('click', () => {
-                    document.getElementById('game-details').innerHTML = '';
-                    document.getElementById('game-container').scrollIntoView();             
-                 });
         });
-    });
+    })
+    .catch(error => console.error('Error fetching games:', error));
+
